@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"><title>Extension Auto Reloader</title></head>
+<body>
+  <header><div class="icon">↻</div><div><h1>Auto Reloader</h1><p id="browser">Chromium</p></div></header>
+  <section class="status"><span id="dot"></span><div><strong id="statusTitle">Configuração necessária</strong><small id="statusDetail">Escolha a pasta das extensões.</small></div></section>
+  <button id="choose" class="primary">Escolher pasta de extensões</button>
+  <button id="start" hidden>Retomar monitorização</button>
+  <p class="hint">Selecione <code>C:\Users\steven.camara\Extensões</code>. Esta autorização é independente no Chrome e no Edge.</p>
+  <section class="targets">
+    <label for="extensionIds">IDs das extensões a recarregar</label>
+    <textarea id="extensionIds" rows="3" spellcheck="false" placeholder="Um ID por linha (vazio = todas)"></textarea>
+    <button id="saveIds">Guardar IDs</button>
+    <small id="idsStatus">Se ficar vazio, todas as extensões de desenvolvimento serão recarregadas.</small>
+  </section>
+  <section id="last" class="last" hidden><strong>Último reload</strong><p id="lastDetail"></p></section>
+  <footer>Recarrega apenas extensões ativas com instalação de desenvolvimento.</footer>
+  <script src="popup.js"></script>
+</body>
+</html>

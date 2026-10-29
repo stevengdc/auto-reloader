@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Auto Reloader",
+  "version": "1.1.0",
+  "description": "Monitoriza uma pasta local e recarrega extensões Chromium carregadas sem compactação.",
+  "permissions": ["management", "offscreen", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Extension Auto Reloader",
+    "default_popup": "popup.html"
+  }
+}
